@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    attributes:
+      task:
+        title: タスク名
+        status: タスクステータス
+        content: タスクの内容・説明
+        man_hour: 工数
+        deadline_at: 締め切り
+    errors:
+      models:
+        task:
+          attributes:
+            title:
+              blank: を入力してください。
+              too_long: を255文字以内に収めてください。
+            status:
+              inclusion: が不適切な値です。
