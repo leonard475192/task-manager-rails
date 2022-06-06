@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
   rescue_from Exception,                        with: :render_500
   rescue_from ActiveRecord::RecordNotFound,     with: :render_404
-  rescue_from ActionController::RoutingError,   with: :render_404 # うまくハンドリングできていない
+  rescue_from ActionController::RoutingError,   with: :render_404 # TODO うまくハンドリングできていない
 
   def render_404(e = nil)
     render json: { code: 'E0404', message: e.message }, status: :not_found

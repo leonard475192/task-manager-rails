@@ -15,7 +15,7 @@ class Api::V1::TasksController < ApplicationController
     if task.save
       render json: task, status: :created
     else
-      render json: { code: 'E0400', message: task.errors.full_messages }, status: :bad_request  # 共通化したかった
+      render json: { code: 'E0400', message: task.errors.full_messages }, status: :bad_request  # TODO 共通化したかった
     end
   end
 
@@ -23,7 +23,7 @@ class Api::V1::TasksController < ApplicationController
     if @task.update(post_params)
       render json: @task
     else
-      render json: { code: 'E0400', message: task.errors.full_messages }, status: :bad_request  # 共通化したかった
+      render json: { code: 'E0400', message: task.errors.full_messages }, status: :bad_request  # TODO 共通化したかった
     end
   end
 
